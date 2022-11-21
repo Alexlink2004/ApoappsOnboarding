@@ -1,6 +1,7 @@
+import 'package:apoapps_onboarding_screen/sk_onboarding_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:sk_onboarding_screen/flutter_onboarding.dart';
-import 'package:sk_onboarding_screen/sk_onboarding_screen.dart';
+import 'package:apoapps_onboarding_screen/flutter_onboarding.dart';
+import 'package:apoapps_onboarding_screen/sk_onboarding_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -32,40 +33,41 @@ class HomePageState extends State<HomePage> with TickerProviderStateMixin {
         pages: pages,
         skipClicked: (value) {
           print(value);
-          _globalKey.currentState.showSnackBar(SnackBar(
-            content: Text("Skip clicked"),
-          ));
+          // _globalKey.currentState.showSnackBar(SnackBar(
+          //   content: Text("Skip clicked"),
+          // ));
         },
         getStartedClicked: (value) {
           print(value);
-          _globalKey.currentState.showSnackBar(SnackBar(
-            content: Text("Get Started clicked"),
-          ));
+          // _globalKey.currentState.showSnackBar(SnackBar(
+          //   content: Text("Get Started clicked"),
+          // ));
         },
       ),
     );
   }
 
   final pages = [
-    SkOnboardingModel(
-        title: 'Choose your item',
-        description:
-            'Easily find your grocery items and you will get delivery in wide range',
-        titleColor: Colors.black,
-        descripColor: const Color(0xFF929794),
-        imagePath: 'assets/onboarding1.png'),
-    SkOnboardingModel(
-        title: 'Pick Up or Delivery',
-        description:
-            'We make ordering fast, simple and free-no matter if you order online or cash',
-        titleColor: Colors.black,
-        descripColor: const Color(0xFF929794),
-        imagePath: 'assets/onboarding2.png'),
-    SkOnboardingModel(
-        title: 'Pay quick and easy',
-        description: 'Pay for order using credit or debit card',
-        titleColor: Colors.black,
-        descripColor: const Color(0xFF929794),
-        imagePath: 'assets/onboarding3.png'),
+    ApoappsOnboardingModel(
+      title: "Learn math",
+      description: "Description 1",
+      titleColor: Colors.black,
+      descripColor: const Color(0xFF929794),
+      imagePath: 'assets/education.png',
+    ),
+    ApoappsOnboardingModel(
+      title: "Title 2",
+      description: "Description 2",
+      titleColor: Colors.black,
+      descripColor: const Color(0xFF929794),
+      imagePath: 'assets/process.png',
+    ),
+    ApoappsOnboardingModel(
+      title: "Title 3",
+      description: "Description 3",
+      titleColor: Colors.black,
+      descripColor: const Color(0xFF929794),
+      imagePath: 'assets/love.png',
+    ),
   ];
 }

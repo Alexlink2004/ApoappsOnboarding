@@ -1,11 +1,10 @@
-name: sk_onboarding_screen
-description: A library that walks a user through multiple on-boarding screens in a simple and easy way
-version: 1.0.1
-author: Senthil Kumar<senthilece01@gmail.com>
-homepage: https://github.com/senthilece01/SKOnboardingScreen.git
+name: apoapps_onboarding_screen
+description: Add an onboarding screen to your app, this is a fork of SKOnBoardingScreen by senthilece01 (That doesn't work in nullsafety and newer flutter versions))
+version: 1.0.4
+homepage: https://github.com/Alexlink2004/ApoappsOnboarding.git
 
 environment:
-  sdk: ">=2.1.0 <3.0.0"
+  sdk: '>=2.12.0 <3.0.0'
 
 dependencies:
   flutter:

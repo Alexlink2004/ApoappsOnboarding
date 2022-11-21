@@ -1,23 +1,23 @@
 library sk_onboarding_screen;
 
+import 'package:apoapps_onboarding_screen/sk_onboarding_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:sk_onboarding_screen/sk_onboarding_model.dart';
 
 class SKOnboardingScreen extends StatefulWidget {
-  final List<SkOnboardingModel> pages;
+  final List<ApoappsOnboardingModel> pages;
   final Color bgColor;
   final Color themeColor;
   final ValueChanged<String> skipClicked;
   final ValueChanged<String> getStartedClicked;
 
   SKOnboardingScreen({
-    Key key,
-    @required this.pages,
-    @required this.bgColor,
-    @required this.themeColor,
-    @required this.skipClicked,
-    @required this.getStartedClicked,
+    Key? key,
+    required this.pages,
+    required this.bgColor,
+    required this.themeColor,
+    required this.skipClicked,
+    required this.getStartedClicked,
   }) : super(key: key);
 
   @override
@@ -80,7 +80,7 @@ class SKOnboardingScreenState extends State<SKOnboardingScreen> {
                 children: <Widget>[
                   Container(
                     alignment: Alignment.centerRight,
-                    child: FlatButton(
+                    child: ElevatedButton(
                       onPressed: () {
                         widget.skipClicked("Skip Tapped");
                       },
@@ -146,7 +146,7 @@ class SKOnboardingScreenState extends State<SKOnboardingScreen> {
     );
   }
 
-  Widget _showPageData(SkOnboardingModel page) {
+  Widget _showPageData(ApoappsOnboardingModel page) {
     return Padding(
       padding: EdgeInsets.all(40.0),
       child: Column(

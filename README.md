@@ -1,20 +1,20 @@
-# SKOnBoarding Screen
+# ApoappsOnBoarding Screen (SKOnBoarding Screen update)
  
-A library that walks a user through multiple on-boarding screens in a simple and easy way
+A library that helps you to make an onboarding screen to your app (Forked from SKonboardingScreen by Senthil Kumar, package that is no longer supported),I changed the name to differentiate them, i forked it because I use it on my own apps (https://apodapps.com/ )
+Original package: https://pub.dev/packages/sk_onboarding_screen, 
   
- [![Flutter](https://img.shields.io/badge/Platform-Flutter-blue.svg)](https://flutter.dev/)
- 
-## GIF
 
-![SKOnBoarding Demo](https://user-images.githubusercontent.com/10756609/74606492-cecdeb80-50f6-11ea-9cdb-a4497a718dc8.gif)
+
+
+ [![Flutter](https://img.shields.io/badge/Platform-Flutter-blue.svg)](https://flutter.dev/)
 
 ## 💻 Installation
 
-You just need to add `sk_onboarding_screen` as a [dependency in your pubspec.yaml file.](https://flutter.dev/docs/development/packages-and-plugins/using-packages)
+You just need to add `apoapps_onboarding_screen` as a [dependency in your pubspec.yaml file.](https://flutter.dev/docs/development/packages-and-plugins/using-packages)
 
 ```yaml
 dependencies:
-sk_onboarding_screen: ^1.0.1
+apoapps_onboarding_screen: ^1.0.3
 ```
 
 ## Usage
@@ -22,28 +22,28 @@ sk_onboarding_screen: ^1.0.1
 ### Import this class
 
 ```dart
-import 'package:sk_onboarding_screen/sk_onboarding_screen.dart;
+import 'package:apoapps_onboarding_screen/sk_onboarding_screen.dart';
 ```
 
-## SKOnboardingModel
+## ApoappsOnboardingModel
 
 ```dart
   final pages = [
-    SkOnboardingModel(
+    ApoappsOnboardingModel(
         title: 'Choose your item',
         description:
             'Easily find your grocery items and you will get delivery in wide range',
         titleColor: Colors.black,
         descripColor: const Color(0xFF929794),
         imagePath: 'assets/onboarding1.png'),
-    SkOnboardingModel(
+ ApoappsOnboardingModel(
         title: 'Pick Up or Delivery',
         description:
             'We make ordering fast, simple and free-no matter if you order online or cash',
         titleColor: Colors.black,
         descripColor: const Color(0xFF929794),
         imagePath: 'assets/onboarding2.png'),
-    SkOnboardingModel(
+ ApoappsOnboardingModel(
         title: 'Pay quick and easy',
         description: 'Pay for order using credit or debit card',
         titleColor: Colors.black,
@@ -51,14 +51,14 @@ import 'package:sk_onboarding_screen/sk_onboarding_screen.dart;
         imagePath: 'assets/onboarding3.png'),
   ];
 ```
-### Pass it into SKOnboardingScreen Widget
+### Pass it into ApoappsOnboardingScreen Widget
 
 ```dart
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
-      body: SKOnboardingScreen(
+      body: ApoappsOnboardingScreen(
         bgColor: Colors.white,
         themeColor: const Color(0xFFf74269),
         pages: pages,
@@ -75,16 +75,14 @@ import 'package:sk_onboarding_screen/sk_onboarding_screen.dart;
 
 ## 📃License
 
-    Copyright 2020, Senthil Kumar
+    Copyright <2022> <Alejandro Apodaca Cordova>
 
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
+    Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
 
-       http://www.apache.org/licenses/LICENSE-2.0
+    1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
 
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
+    2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+
+    3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
